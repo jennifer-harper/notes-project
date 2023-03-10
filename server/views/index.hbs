@@ -1,5 +1,10 @@
-<ul>
-  {{#each users}}
-  <li>{{name}} ({{email}})</li>
+<h1>{{title}}</h1>
+<div class="flex-wrapper"> 
+  {{#each notes}}
+  <div> 
+    <h2>{{name}}</h2>
+    <p>{{details}}</p>
+    <a href="/{{id}}/edit">Edit note</a>
+  </div>
   {{/each}}
-</ul>
+</div>

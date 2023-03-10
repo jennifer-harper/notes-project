@@ -3,14 +3,23 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers,
+  getNotes:getNotes,
+  getNote:getNote,
+  editNote
 }
 
-function getUsers(db = connection) {
-  return db('users').select()
+
+function getNotes (db = connection){
+  return db('note-pad').select()
 }
 
-function getUser(id, db = connection) {
-  return db('users').where('id', id).first()
+function getNote(id, db = connection) {
+  return db('note-pad').where('id', id).first()
+}
+
+
+function editNote(updateNote, db = connection) {
+  return db('note-pad')
+  .update(updateNote)
+  .where({id: updateNote.id})
 }
