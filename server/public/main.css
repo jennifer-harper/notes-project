@@ -1,12 +1,10 @@
 body{
-    background-color: #6a4f06;
-    color:#fdfaf0;
+    background-color: #dcd4c7;
+    /* color:#fdfaf0; */
+    color:#3D3D3D;
     font-family: 'Barlow Condensed', sans-serif;
     padding: 20px;
 }
-
-
-
 
 a:hover{
     color:#201800;
@@ -50,6 +48,7 @@ h1{
     flex-wrap: wrap;
 }
 
+
 .icon-btn {
     display: flex;
     flex-direction: row;
@@ -57,17 +56,18 @@ h1{
     text-decoration: none;
     line-height: 40px;
     justify-content: flex-end;
+    color:#3D3D3D;
 }
 .icon-btn span{
     font-size: 30px;
     margin-left: 10px;
-    background-color: #201801;
+    background-color: #424e78;
     width: 44px;
     text-align: center;
     border-radius: 100%;
     padding-bottom: 4px;
     font-weight: 800;
-    color: #6a4f06;
+    color: #dcd4c7;
 }
 
 .icon-btn.go-home span{
@@ -82,7 +82,7 @@ h1{
 }
 
 a:hover span{
-    background-color:#201800;
+    background-color:#020d34;
 }
 
 
@@ -112,7 +112,10 @@ a:hover span{
 }
 .flex-wrapper div a{
     margin-top: 20px;
+    color: #fff;
 }
+
+
 
 
 /***********media queries*****************/
@@ -154,6 +157,7 @@ input,label, textarea{
     font-family: inherit;
     font-size: 1.2em;
     padding: 10px 12px;
+    border:none;
 }
 input{
     margin-bottom: 20px;
@@ -161,7 +165,7 @@ input{
 button{
     margin-top: 20px;
     height: 40px;
-    background-color:rgb(59, 44, 3);
+    background-color: #424e78;
     border: none;
     color: white;
     font-weight: bold;
@@ -170,9 +174,16 @@ button{
 }
 button:hover{
     box-shadow: none;
-    background-color:rgb(32, 24, 1);
+    background-color:#020d34;
 }
 button, button:hover{
     transition: all 0.3s ease-in-out;
+}
+button#delete{
+    margin-top:0px;
+    background-color: #020d34;
+}
+button#delete:hover{
+    background-color: #424e78;
 }
 
