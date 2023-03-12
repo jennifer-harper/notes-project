@@ -1,0 +1,17 @@
+<div class="intro">
+<h1>Add new note</h1>
+ <a href="/" class="icon-btn go-home"><span>&#43;</span> Home</a>
+</div>
+
+<div class="form-wrapper">
+<form method="POST" action="/add-note" class="form">
+  <input type="hidden" name="id" value="">
+
+  <label for="name">Note name</label>
+  <input type="text" id="name" name="name" placeholder="name" value="">
+  
+  <label for="details">Details</label>
+  <textarea rows="10" id="details" name="details" placeholder="details"></textarea>
+  <button>Update note</button>
+</form>
+</div>

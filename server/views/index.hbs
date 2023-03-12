@@ -1,10 +1,15 @@
-<h1>{{title}}</h1>
+<div class="intro home">
+  <h1>{{title}}</h1>
+  <a href="/add-note" class="icon-btn">Add note <span>&#43;</span></a>
+</div>
 <div class="flex-wrapper"> 
   {{#each notes}}
   <div> 
     <h2>{{name}}</h2>
     <p>{{details}}</p>
-    <a href="/{{id}}/edit">Edit note</a>
+
+    <a href="/{{id}}/edit" class="icon-btn">Edit note<span>&#43;</span></a>
+
   </div>
   {{/each}}
 </div>

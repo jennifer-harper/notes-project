@@ -1,7 +1,10 @@
+<div class="intro">
 <h1>Edit {{title}}</h1>
+ <a href="/" class="icon-btn go-home"><span>&#43;</span> Home</a>
+</div>
 
-<div>
-<h2>edit note: <span class="data">{{note.name}}</span></h2>
+<div class="form-wrapper">
+<h2>Current:<span class="data">{{note.name}}</span></h2>
 
 <form method="POST" action="/edit" class="form">
   <input type="hidden" name="id" value="{{note.id}}">
@@ -10,9 +13,15 @@
   <input type="text" id="name" name="name" placeholder="name" value="{{note.name}}">
   
   <label for="details">Details</label>
-  <textarea rows="4" id="details" name="details" placeholder="details">{{note.details}}</textarea>
+  <textarea rows="10" id="details" name="details" placeholder="details">{{note.details}}</textarea>
   
   <div></div>
   <button>Update note</button>
+</form>
+
+<form method="POST" action="/delete" class="form">
+<input type="hidden" name="id" value="{{note.id}}">
+<p>Maybe you just want to start again?</p>
+  <button>Delete note</button>
 </form>
 </div>

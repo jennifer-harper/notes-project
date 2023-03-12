@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     .then((notes) => {
 
       const dataObj = {
-        title: 'Note pad website',
+        title: 'Your notes',
         notes: notes
       }
       res.render('index', dataObj)
@@ -53,6 +53,38 @@ router.post('/edit', (req, res) => {
       res.status(500).send('Something went wrong!');
     });
 });
+
+
+// POST delete
+router.post('/delete', (req, res) => {
+const id = Number(req.body.id)
+
+console.log(id)
+  db.deleteNote(id)
+  .then(() => {
+    res.redirect('/')
+  })
+  .catch((err) => {
+    console.log(err.message)
+    res.status(500).send('Things gone bad!')
+  })
+})
+
+router.get('/add-note', (req, res) => {
+  res.render('add-note');
+})
+
+router.post('/add-note', (req, res) => {
+  console.log(req.body)
+  db.addNote(req.body)
+    .then(() => {
+      res.redirect(`/`)
+    })
+    .catch((err) => {
+      console.log(err.message)
+      res.status(500).send('Something went wrong!')
+    })
+})
 
 
 

@@ -4,16 +4,26 @@ body{
     font-family: 'Barlow Condensed', sans-serif;
     padding: 20px;
 }
-a{
-    color:#fdfaf0;
-}
+
+
+
+
 a:hover{
     color:#201800;
 }
+
 a{
+    color:#fdfaf0;
     font-size: 1.1em;
     letter-spacing: 1px;
 }
+
+
+
+a, a:hover, a span, a:hover span{
+   transition: all 0.3s ease-in-out;
+}
+
 p{
     font-size: 1.3em;
     letter-spacing: 1px;
@@ -31,18 +41,138 @@ h1{
 }
 
 
+.intro.home{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    line-height: 40px;
+    justify-content: flex-end;
+}
+.icon-btn span{
+    font-size: 30px;
+    margin-left: 10px;
+    background-color: #201801;
+    width: 44px;
+    text-align: center;
+    border-radius: 100%;
+    padding-bottom: 4px;
+    font-weight: 800;
+    color: #6a4f06;
+}
+
+.icon-btn.go-home span{
+    margin-left: 0;
+    margin-right: 10px;
+
+}
+
+.icon-btn.go-home {
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+a:hover span{
+    background-color:#201800;
+}
+
+
 .flex-wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+
+.form-wrapper,
+.flex-wrapper div{
+    box-sizing: border-box;
+    padding:20px;
+    min-height: 300px;
+    background-color: #0000001f;    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.13);
 }
 
 .flex-wrapper div{
-    padding:20px;
-    min-height: 300px;
-    background-color: #0000001f;
-    width: calc(25% - 40px);
+    width: 100%;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex-wrapper div a{
+    margin-top: 20px;
+}
+
+
+/***********media queries*****************/
+@media (min-width: 768px){
+    .flex-wrapper div{
+        width: calc(50% - 40px)
+    }
+}
+
+@media (min-width: 1100px){
+    .flex-wrapper div{        
+        width: calc(50% - 40px)
+    }
+
+    .wrapper{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1400px){
+   .wrapper{
+        max-width: 60%;
+    }
+}
+
+
+/***********form*****************/
+.form-wrapper{
+    max-width: 600px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+}
+input,label, textarea{
+    font-family: inherit;
+    font-size: 1.2em;
+    padding: 10px 12px;
+}
+input{
+    margin-bottom: 20px;
+}
+button{
+    margin-top: 20px;
+    height: 40px;
+    background-color:rgb(59, 44, 3);
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
     box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 6px 6px rgba(0,0,0,0.13);
 }
+button:hover{
+    box-shadow: none;
+    background-color:rgb(32, 24, 1);
+}
+button, button:hover{
+    transition: all 0.3s ease-in-out;
+}
+
